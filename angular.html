@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+<ol>
+        <input type="text" name="ajoutFilm" data-ng-model="ajoutFilm">
+        <button data-ng-click="ajouterFilm()">Ajouter un film</button>
+        <li data-ng-repeat="film in films">
+            {{film}}
+        </li>
+    </ol>
 
-</head>
-<body>
 
-</body>
-</html>
+
