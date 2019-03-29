@@ -50,11 +50,14 @@ function insert()
 }
 
 
-  $sql=  "SELECT * FROM `angular`";
-  global $conn;
-  $result = $conn->query($sql);
-    json_encode($result);
+$sql = "SELECT `films`,`jeuxVideos`,`livres` FROM `angular`";
+$tab = array();
+$result= $conn->query($sql);
 
+while($test=$result->fetch_assoc()){
+    $tab[] = $test;
+}
+echo json_encode($tab);
 
 
 

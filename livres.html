@@ -1,10 +1,41 @@
-<ol>
+<style>
+.englobLivre{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2%;
+}
+    .livre{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .titreLivre{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        color: darkgreen;
+
+    }
+    .livreTitre{
+        display: flex;
+        justify-content: center;
+        padding: 3% auto;
+        color: brown;
+    }
+
+</style>
+<h1 class="livreTitre">Ajouter un livre</h1>
+<div class="englobLivre">
         <input type="text" name="ajoutLivres" data-ng-model="ajoutLivres">
         <button data-ng-click="ajouterLivres()">Ajouter un Livre</button>
-        <li data-ng-repeat="Livre in Livres">
-            {{Livre}}
-        </li>
-    </ol>
+</div>
+<h2 class="titreLivre">List Livres</h2>
+        <ol data-ng-repeat="Livre in Livres">
+         <div class="livre">  <li class="livrelist"> {{Livre.livres}}</li></div>
+        </ol>
+
 
 
 

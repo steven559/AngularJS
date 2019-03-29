@@ -1,7 +1,35 @@
-    <ol>
-        <input type="text" name="ajoutJeuxvideo" data-ng-model="ajoutJeuxvideo">
-        <button data-ng-click="ajouterJeuxvideo()">Ajouter un film</button>
-        <li data-ng-repeat="jeuxVideo in jeuxVideos">
-            {{jeuxVideo}}
-        </li>
-    </ol>
+<style>
+    .boutonJeux {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2%;
+    }
+    .jeux{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+.titrejeu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: darkgreen;
+}
+    .titreJeux{
+        display: flex;
+        justify-content: center;
+        padding: 3% auto;
+        color: brown;
+    }
+</style>
+<h1 class="titreJeux"> Ajouter un jeu</h1>
+<div class="boutonJeux">
+    <input type="text" name="ajoutJeuxvideo" data-ng-model="ajoutJeuxvideo">
+    <button data-ng-click="ajouterJeuxvideo()">Ajouter un film</button>
+</div>
+<h2 class="titrejeu">ListJeux</h2>
+<ol data-ng-repeat="jeuxVideo in jeuxVideos">
+    <li class="jeux">{{jeuxVideo.jeuxVideos}}</li>
+</ol>
+

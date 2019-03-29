@@ -1,10 +1,37 @@
-<ol>
+<h1 class="titreFilms">Ajouter un film</h1>
+<style>
+    .titreFilms {
+        display: flex;
+        justify-content: center;
+        padding: 3% auto;
+        color: brown;
+    }
+
+    .list {
+    }
+
+</style>
+<div>
+    <div style="display: flex; flex-direction: row;justify-content: center">
         <input type="text" name="ajoutFilm" data-ng-model="ajoutFilm">
+
         <button data-ng-click="ajouterFilm()">Ajouter un film</button>
-        <li data-ng-repeat="film in films">
-            {{film}}
-        </li>
-    </ol>
+    </div>
+    <h2 style="
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: darkgreen;">List Film</h2>
+    <div data-ng-repeat="film in films">
+        <ol>
+            <li class="list"
+                style="display: flex; flex-direction: column;justify-content: center; align-items: center; ">
+                {{film.films}}
+            </li>
+        </ol>
+
+    </div>
+</div>
 
 
 

@@ -5,23 +5,87 @@
 
     <title>Title</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+
     <script src="angular-route.min.js"></script>
 </head>
+<style>
+    .titre {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        color: #009688;
+    }
+
+    .header {
+
+
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        background-color: antiquewhite;
+
+    }
+
+    .a {
+        color: #009688;
+        text-decoration: none;
+
+    }
+
+    .a:hover {
+        color: blue;
+        font-size: 20px;
+    }
+
+    .test {
+        background-color: aqua;
+        font-size: 100px;
+    }
+
+    @media screen and(max-width: 800px) {
+        .titre {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+    $('.a').hover(function () {
+        $('.a').toggleClass('test');
+    });
+    console.log()
+</script>
+<body>
+
+
 
 <div data-ng-app="monAppli">
-<nav>
 
+    <nav>
+        <h1 class="titre">SITE</h1>
 
-    <a href="#!">Lien</a>
-    <a href="#!/films">lien1</a>
-    <a href="#!/jeuxvideos">lien2</a>
-    <a href="#!/livres">lien3</a>
-</nav>
-<div class="ng-view">
+        <div> <a href=#!/log>Inscription</a></div>
+        <div><a href="#!/login">Connection</a></div>
+        <div><a href="#!"><span class="a">Home</span></a></div>
+        <div><a href="#!/films"><span class="a">Films</span></a></div>
+        <div><a href="#!/jeuxvideos"><span class="a">JeuxVideos</span></a></div>
+        <div><a href="#!/livres"><span class="a">Livres</span></a></div>
 
+    </nav>
+    <div class="header">
+    </div>
+    <div class="ng-view">
+
+    </div>
 </div>
-</div>
-
 
 
 <script src="angular.js"></script>
